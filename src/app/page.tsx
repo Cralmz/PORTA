@@ -1,65 +1,656 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+export default function Portfolio() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main style={{ width: '100%', overflowX: 'hidden', margin: 0, padding: 0 }}>
+      {/* SECCIÓN 1: HERO */}
+      <section style={{
+        minHeight: '100vh',
+        background: '#05020e',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <h1 style={{
+            fontSize: 'clamp(60px, 10vw, 120px)',
+            fontWeight: '900',
+            color: '#ffffff',
+            marginBottom: '20px',
+            letterSpacing: '-2px',
+            lineHeight: '1'
+          }}>
+            PORTAFOLIO
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p style={{
+            color: '#ffffff',
+            fontSize: 'clamp(10px, 3vw, 25px)',
+            letterSpacing: '1em',
+            fontWeight: '300'
+          }}>
+            CRISTIAN MERCADO
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* SECCIÓN 2: SOBRE MÍ */}
+<section
+  style={{
+    position: "relative",
+    width: "100%",
+    minHeight: "100vh",
+    background: "#fff",
+    display: "flex",
+    boxSizing: "border-box",
+    overflow: "hidden",
+    paddingBottom: "60px",
+  }}
+>
+  <div
+    style={{
+      position: "relative",
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: "100px",
+      alignItems: "flex-start",
+      maxWidth: "1400px",
+      width: "100%",
+      padding: "60px 60px 0 20px",
+      margin: "0 auto",
+      zIndex: 2,
+    }}
+  >
+    {/* Columna Izquierda */}
+    <div style={{ position: "relative", zIndex: 3 , paddingLeft: "60px" }}>
+      {/* Habilidades - MÁS PEQUEÑO y MÁS A LA IZQUIERDA */}
+      <div style={{ marginBottom: "100px" }}>
+        <h2
+          style={{
+            fontSize: "25px",
+            fontWeight: "700",
+            color: "#000",
+            margin: "0 0 20px 0",
+          }}
+        >
+          Habilidades
+        </h2>
+        <div style={{ lineHeight: "2.6", fontSize: "16px", color: "#000" }}>
+          <p style={{ margin: "6px 3px" }}>Liderazgo</p>
+          <p style={{ margin: "6px 3px" }}>Comunicación</p>
+          <p style={{ lineHeight: "1.5", margin: "6px 3px" }}>Resolución de <br />
+          problemas</p>
+          <p style={{ margin: "6px 3px" }}>Adaptabilidad</p>
+          <p style={{ lineHeight: "1.5", margin: "6px 3px" }}>Pensamiento <br />
+          crítico</p>
+          <p style={{ margin: "6px 3px" }}>Creatividad</p>
         </div>
-      </main>
+      </div>
     </div>
+
+    {/* Columna Derecha */}
+    <div style={{ position: "relative", zIndex: 4 }}>
+      {/* Rectángulo negro con nombre - MUY DELGADO y COMIENZA ANTES */}
+      <div
+        style={{
+          background: "#05020e",
+          color: "#fff",
+          borderRadius: "30px 0 0 30px",
+          padding: "5px 140px",
+          display: "inline-block",
+          marginBottom: "40px",
+          float: "right",
+          marginRight: "-70px",
+          marginLeft: "-90px",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "48px",
+            fontWeight: "700",
+            margin: "0",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Cristian Mercado
+        </h2>
+      </div>
+
+      <div style={{ clear: "both" }}>
+        <p
+          style={{
+            fontSize: "20px",
+            lineHeight: "1.4",
+            color: "#000",
+            marginBottom: "30px",
+            marginTop: "0",
+          }}
+        >
+          Soy una persona comprometida, creativa y con muchas ganas de aprender. Me gusta mucho el diseño y las matemáticas. Me destaco por trabajar bien en equipo, analizar problemas y buscar siempre soluciones creativas. Actualmente me encuentro en formación, con el objetivo de desarrollar sus habilidades y crecer profesionalmente.
+        </p>
+
+        <h3
+          style={{
+            fontSize: "28px",
+            fontWeight: "700",
+            color: "#000",
+            marginBottom: "20px",
+          }}
+        >
+          Educación
+        </h3>
+
+        <div style={{ display: "flex", alignItems: "flex-start", gap: "0" }}>
+          <div
+            style={{
+              background: "#000",
+              color: "#fff",
+              padding: "10px 6px",
+              writingMode: "vertical-rl",
+              textOrientation: "mixed",
+              fontSize: "11px",
+              fontWeight: "500",
+              letterSpacing: "1px",
+              minWidth: "30px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            2024-2025
+          </div>
+          <div style={{ paddingLeft: "20px", paddingTop: "10px" }}>
+            <h4
+              style={{
+                fontSize: "16px",
+                fontWeight: "700",
+                color: "#000",
+                marginBottom: "17px",
+                marginTop: "0",
+              }}
+            >
+              BACHILLERATO GENERAL
+            </h4>
+            <p
+              style={{
+                fontSize: "13px",
+                fontStyle: "italic",
+                color: "#000",
+                lineHeight: "0",
+                margin: "0",
+              }}
+            >
+              COMPLEJO EDUCATIVO SOLDADO OSCAR ANTONIOO ORTIZ REYES
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Imagen de perfil - COMPLETA sin cortar */}
+  <img
+    src="/perfil.png"
+    alt="Cristian Mercado"
+    style={{
+      position: "absolute",
+      bottom: "0",
+      left: "10%",
+      width: "auto",
+      height: "100%",
+      display: "block",
+      filter: "grayscale(100%)",
+      zIndex: 1,
+      objectFit: "contain",
+      objectPosition: "center bottom",
+    }}
+  />
+
+  {/* Rectángulo blanco con íconos - ABAJO A LA IZQUIERDA */}
+  <div
+    style={{
+      position: "absolute",
+      bottom: "50px",
+      left: "0",
+      background: "#fff",
+      borderRadius: "0 50px 50px 0",
+      boxShadow: "0 10px 40px rgba(0,0,0,0.15)",
+      padding: "10px 40px",
+      display: "flex",
+      gap: "28px",
+      alignItems: "center",
+      zIndex: 10,
+    }}
+  >
+    {["/python.png", "/excel.png", "/word.png", "/grafico.png"].map(
+      (icon, i) => (
+        <img
+          key={i}
+          src={icon}
+          alt=""
+          style={{
+            width: "40px",
+            height: "40px",
+            objectFit: "contain",
+          }}
+        />
+      )
+    )}
+  </div>
+</section>
+
+
+      {/* SECCIÓN 3: PROYECTOS */}
+      <section style={{
+        minHeight: '100vh',
+        background: '#05020e',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'left',
+        paddingLeft: "50px",
+        padding: '60px 20px'
+      }}>
+        <div style={{ maxWidth: '900px', width: '100%', paddingLeft: "50px" }}>
+          <h2 style={{
+            fontSize: 'clamp(50px, 7vw, 128px)',
+            fontWeight: '800',
+            color: '#ffffff',
+            marginBottom: '40px',
+            lineHeight: '1'
+          }}>
+            Proyectos
+          </h2>
+          <div style={{ color: '#ffffff' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '20px' }}>
+              <span style={{ fontSize: 'clamp(36px, 6vw, 35px)', fontWeight: 'bold' }}>01</span>
+              <span style={{ fontSize: 'clamp(28px, 5vw, 35px)', fontWeight: '300', letterSpacing: '0.1em' }}>
+                DEXPERT
+              </span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+              <span style={{ fontSize: 'clamp(36px, 6vw, 35px)', fontWeight: 'bold' }}>02</span>
+              <span style={{ fontSize: 'clamp(28px, 5vw, 35px)', fontWeight: '300', letterSpacing: '0.1em' }}>
+                CHAMBI
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN 4: DEXPERT */}
+<section style={{
+  minHeight: '100vh',
+  background: '#fff',
+  padding: '60px 20px',
+  position: 'relative',
+  overflow: 'hidden'
+}}>
+  <div style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '60px',
+    alignItems: 'center',
+    position: 'relative',
+    zIndex: 0
+  }} className="grid-2-cols">
+    
+    {/* Columna de la imagen con fondo - IZQUIERDA */}
+    <div style={{ position: 'relative', height: '100%' }}>  {/* <-- QUITÉ className="order-2-mobile" */}
+      {/* Imagen de fondo oscura - más a la izquierda */}
+      <div style={{
+        position: 'absolute',
+        bottom: '-55%',
+        top: '-20%',
+        left: '-15%',
+        right: '-5%',
+        display: "block",
+        zIndex: 0,
+        overflow: 'hidden',
+      }}>
+        <img 
+          src="/expo-tech-background.jpg"
+          alt="Background" 
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center bottom',
+          }}
+        />
+        
+        {/* Textos dentro de la imagen de fondo */}
+        <div style={{
+          position: 'absolute',
+          bottom: '30px',
+          left: '20px',
+          zIndex: 3
+        }}>
+          <p style={{ 
+            fontSize: 'clamp(15px, 2vw, 13px)',
+            fontWeight: 'bold', 
+            margin: 0,
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.7)',
+            letterSpacing: '0.5px'
+          }}>
+            PROGRAMA EMPRESARIAL ¡SUPÉRATE!
+          </p>
+          <p style={{ 
+            fontSize: 'clamp(14px, 2vw, 13px)',
+            fontStyle: 'italic', 
+            margin: '5px 0 0 0',
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
+          }}>
+            Ganadores Expo Tech 2025
+          </p>
+        </div>
+      </div>
+
+      {/* Imagen principal de Dexpert */}
+      <div style={{ 
+        position: 'absolute',
+        top: '100px',
+        left: '30%',
+        width: '85%',
+        zIndex: 2 
+      }}>
+        <img 
+          src="/dexpert.png" 
+          alt="Dexpert Project" 
+          style={{
+            width: '100%',
+            borderRadius: '20px',
+            boxShadow: '0 25px 50px rgba(0,0,0,0.3)'
+          }}
+        />
+      </div>
+    </div>
+
+    {/* Descripción - DERECHA */}
+<div style={{}}>
+  <h2 style={{
+    fontSize: 'clamp(50px, 8vw, 70px)',
+    fontWeight: 'bold',
+    marginBottom: '40px',
+    color: '#000',
+    textAlign: 'center'  // <-- Solo esto para centrar "Dexpert"
+  }}>
+    Dexpert
+  </h2>
+  <p style={{
+  fontSize: 'clamp(16px, 2.5vw, 20px)',
+  lineHeight: '1.5',
+  color: '#000',
+  paddingLeft: '60px'  // <-- Agrega esto (ajusta el valor que necesites)
+}}>
+  Dexpert es una plataforma que conecta a jóvenes sin experiencia con pequeñas 
+  empresas para trabajar en proyectos reales. Busca darles su primera experiencia 
+  laboral, permitiéndoles aprender, aplicar sus conocimientos y obtener un certificado. 
+  Es inclusiva, abierta a personas con discapacidad, y también ayuda a emprendedores 
+  a hacer crecer sus negocios con apoyo joven.
+</p>
+</div>
+  </div>
+</section>
+
+      {/* SECCIÓN 5: CHAMBI */}
+      <section style={{
+        minHeight: '100vh',
+        background: 'black',
+        padding: '60px 20px'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: '60px',
+          alignItems: 'center'
+        }} className="grid-2-cols">
+          {/* Descripción */}
+          <div style={{}} className="order-2-mobile">
+            <h2 style={{
+              fontSize: 'clamp(50px, 8vw, 70px)',
+              fontWeight: 'bold',
+              marginBottom: '40px',
+              color: '#000'
+            }}>
+              CHAMBI
+            </h2>
+            <p style={{
+              fontSize: 'clamp(16px, 2.5vw, 20px)',
+              lineHeight: '1.8',
+              color: '#000'
+            }}>
+              CHAMBI es una plataforma que conecta a personas con calificadas para reparaciones 
+              del hogar de forma rápida y segura. Usa localización para encontrar las personas 
+              más cercanas y confiables. También ayuda a que los trabajadores tengan más 
+              reconocimiento en sus comunidades.
+            </p>
+          </div>
+
+          {/* Imagen del proyecto */}
+          <div style={{ position: 'relative' }} className="order-1-mobile">
+            <img 
+              src="/chambi.jpg" 
+              alt="Chambi Project" 
+              style={{
+                width: '100%',
+                borderRadius: '20px',
+                boxShadow: '0 25px 50px rgba(0,0,0,0.5)'
+              }}
+            />
+            <div style={{
+              position: 'absolute',
+              bottom: '30px',
+              right: '30px',
+              color: 'white',
+              textAlign: 'right'
+            }}>
+              <p style={{ fontSize: 'clamp(14px, 2.5vw, 20px)', fontWeight: 'bold', margin: 0 }}>
+                PROGRAMA EMPRESARIAL ¡SUPÉRATE!
+              </p>
+              <p style={{ fontSize: 'clamp(12px, 2vw, 18px)', fontStyle: 'italic', margin: 0 }}>
+                Expo de logros 2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN 6: CERTIFICADOS */}
+      <section style={{
+        minHeight: '100vh',
+        background: '#05020e',
+        padding: '60px 20px'
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <h2 style={{
+            fontSize: 'clamp(50px, 8vw, 70px)',
+            fontWeight: 'bold',
+            color: '#fff',
+            marginBottom: '60px',
+            textAlign: 'center'
+          }}>
+            Certificados
+          </h2>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr',
+            gap: '30px'
+          }} className="grid-3-cols">
+            {/* Certificado 1 */}
+            <div style={{
+              background: '#000',
+              borderRadius: '15px',
+              overflow: 'hidden',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.5)'
+            }}>
+              <img 
+                src="/cert1.jpg" 
+                alt="Microsoft Office Specialist" 
+                style={{
+                  width: '100%',
+                  height: '300px',
+                  objectFit: 'cover'
+                }}
+              />
+              <div style={{ padding: '25px' }}>
+                <p style={{
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  fontSize: 'clamp(14px, 2vw, 18px)',
+                  fontStyle: 'italic',
+                  color: '#fff'
+                }}>
+                  Microsoft Excel (Microsoft 365 Apps)
+                </p>
+              </div>
+            </div>
+
+            {/* Certificado 2 */}
+            <div style={{
+              background: 'black',
+              borderRadius: '15px',
+              overflow: 'hidden',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.5)'
+            }}>
+              <img 
+                src="/cert2.jpg" 
+                alt="IT Specialist Python" 
+                style={{
+                  width: '100%',
+                  height: '300px',
+                  objectFit: 'cover'
+                }}
+              />
+              <div style={{ padding: '25px' }}>
+                <p style={{
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  fontSize: 'clamp(14px, 2vw, 18px)',
+                  fontStyle: 'italic',
+                  color: '#fff'
+                }}>
+                  Information Techonology Specialist in Python
+                </p>
+              </div>
+            </div>
+
+            {/* Certificado 3 */}
+            <div style={{
+              background: 'black',
+              borderRadius: '15px',
+              overflow: 'hidden',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.5)'
+            }}>
+              <img 
+                src="/cert3.jpg" 
+                alt="TELUS Digital" 
+                style={{
+                  width: '100%',
+                  height: '300px',
+                  objectFit: 'cover'
+                }}
+              />
+              <div style={{ padding: '25px' }}>
+                <p style={{
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  fontSize: 'clamp(14px, 2vw, 18px)',
+                  fontStyle: 'italic',
+                  color: '#fff'
+                }}>
+                  TELUS Digital English Conversation Club
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN 7: CONTACTO */}
+      <section style={{
+        minHeight: '100vh',
+        background: '#0f0f1e',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '60px 20px'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <h2 style={{
+            fontSize: 'clamp(50px, 10vw, 90px)',
+            fontWeight: '800',
+            color: '#ffffff',
+            marginBottom: '40px',
+            lineHeight: '1.5'
+          }}>
+            Muchas gracias
+          </h2>
+          
+          <p style={{
+            color: '#ffffff',
+            fontSize: 'clamp(16px, 3vw, 24px)',
+            marginBottom: '60px',
+            wordBreak: 'break-all'
+          }}>
+            cristianmercadoaz@gmail.com
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '40px' }}>
+            {/* Instagram */}
+            <a href="https://instagram.com/cralmz17?igsh=eDA2dWZyOWNnMmE1" target="_blank" rel="noopener noreferrer" style={{ opacity: 1, transition: 'opacity 0.3s' }}>
+              <svg style={{ width: 'clamp(50px, 8vw, 80px)', height: 'clamp(50px, 8vw, 80px)' }} viewBox="0 0 24 24" fill="#ffffff">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            {/* LinkedIn */}
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 1, transition: 'opacity 0.3s' }}>
+              <svg style={{ width: 'clamp(50px, 8vw, 80px)', height: 'clamp(50px, 8vw, 80px)' }} viewBox="0 0 24 24" fill="#ffffff">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <style jsx>{`
+        @media (min-width: 1024px) {
+          .grid-2-cols {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .order-1-mobile {
+            order: 1;
+          }
+          .order-2-mobile {
+            order: 2;
+          }
+          .grid-3-cols {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .grid-3-cols {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+
+        @media (max-width: 1023px) {
+          .order-1-mobile {
+            order: 1;
+          }
+          .order-2-mobile {
+            order: 2;
+          }
+        }
+      `}</style>
+    </main>
   );
 }
