@@ -1,0 +1,188 @@
+.sobreMi {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.sobreMi__container {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 80px;
+  padding: 0 60px;
+}
+
+/* ===== Scroll Habilidades ===== */
+.sobreMi__habilidades {
+  grid-column: 1 / span 2;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 20px;
+}
+.sobreMi__habilidades::-webkit-scrollbar {
+  display: none;
+}
+.habilidad {
+  background: #f5f5f5;
+  border-radius: 30px;
+  padding: 8px 18px;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 15px;
+  color: #000;
+}
+
+/* ===== Imagen e íconos ===== */
+.sobreMi__imagen {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.sobreMi__imagen img {
+  width: auto;
+  height: 95vh;
+  object-fit: contain;
+  filter: grayscale(100%);
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+.sobreMi__icons {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  background: #fff;
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 10px 40px;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  z-index: 10;
+}
+.sobreMi__icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ===== Texto ===== */
+.sobreMi__texto {
+  z-index: 5;
+}
+.nombre {
+  background: #05020e;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 40px;
+  display: inline-block;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.sobreMi__texto p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+  margin-bottom: 30px;
+}
+.sobreMi__texto h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.educacion {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+.educacion .año {
+  background: #000;
+  color: #fff;
+  padding: 10px 6px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.educacion .detalle {
+  padding-left: 20px;
+}
+.educacion h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 10px;
+}
+.educacion p {
+  font-size: 13px;
+  font-style: italic;
+  color: #000;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .sobreMi__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .sobreMi__habilidades {
+    order: 1;
+    width: 100%;
+  }
+
+  .sobreMi__imagen {
+    order: 2;
+    position: relative;
+    justify-content: center;
+  }
+  .sobreMi__imagen img {
+    position: relative;
+    height: auto;
+    width: 70%;
+    left: 0;
+    bottom: 0;
+  }
+  .sobreMi__icons {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 15px;
+    border-radius: 50px;
+    justify-content: center;
+  }
+
+  .sobreMi__texto {
+    order: 3;
+    text-align: center;
+  }
+  .nombre {
+    display: block;
+    margin: 0 auto 20px;
+  }
+  .educacion {
+    justify-content: center;
+  }
+}

@@ -34,79 +34,187 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* SECCIÓN 2: SOBRE MÍ */}
+
+{/* SECCIÓN 2: SOBRE MÍ */}
 <section
   style={{
     position: "relative",
     width: "100%",
     minHeight: "100vh",
     background: "#fff",
-    display: "flex",
-    boxSizing: "border-box",
     overflow: "hidden",
-    paddingBottom: "60px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-start",
   }}
 >
+  {/* CINTA DE HABILIDADES */}
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      overflow: "hidden",
+      padding: "10px 0",
+      background: "#fff",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "25px",
+        overflowX: "auto",
+        whiteSpace: "nowrap",
+        scrollBehavior: "smooth",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+        padding: "20px 30px",
+      }}
+    >
+      <h2
+        style={{
+          flexShrink: 0,
+          fontSize: "28px",
+          fontWeight: "700",
+          color: "#000",
+          whiteSpace: "nowrap",
+        }}
+      >
+        Habilidades
+      </h2>
+
+      {[
+        "Liderazgo",
+        "Comunicación",
+        "Resolución de problemas",
+        "Adaptabilidad",
+        "Pensamiento crítico",
+        "Creatividad",
+        "Colaboración",
+        "Innovación",
+        "Organización",
+      ].map((skill, i) => (
+        <div
+          key={i}
+          style={{
+            flex: "0 0 auto",
+            background: "#f5f5f5",
+            borderRadius: "25px",
+            padding: "10px 22px",
+            fontSize: "15px",
+            fontWeight: "500",
+            color: "#000",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {skill}
+        </div>
+      ))}
+    </div>
+
+    {/* Oculta la barra de scroll */}
+    <style>
+      {`
+        div[style*="overflow-x: auto"]::-webkit-scrollbar {
+          display: none;
+        }
+      `}
+    </style>
+  </div>
+
+  {/* CONTENEDOR PRINCIPAL */}
   <div
     style={{
       position: "relative",
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
-      gap: "100px",
-      alignItems: "flex-start",
-      maxWidth: "1400px",
-      width: "100%",
-      padding: "60px 60px 0 20px",
-      margin: "0 auto",
-      zIndex: 2,
+      gap: "60px",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "90%",
+      maxWidth: "100%",
+      flexGrow: 1,
     }}
   >
-    {/* Columna Izquierda */}
-    <div style={{ position: "relative", zIndex: 3 , paddingLeft: "60px" }}>
-      {/* Habilidades - MÁS PEQUEÑO y MÁS A LA IZQUIERDA */}
-      <div style={{ marginBottom: "100px" }}>
-        <h2
-          style={{
-            fontSize: "25px",
-            fontWeight: "700",
-            color: "#000",
-            margin: "0 0 20px 0",
-          }}
-        >
-          Habilidades
-        </h2>
-        <div style={{ lineHeight: "2.6", fontSize: "16px", color: "#000" }}>
-          <p style={{ margin: "6px 3px" }}>Liderazgo</p>
-          <p style={{ margin: "6px 3px" }}>Comunicación</p>
-          <p style={{ lineHeight: "1.5", margin: "6px 3px" }}>Resolución de <br />
-          problemas</p>
-          <p style={{ margin: "6px 3px" }}>Adaptabilidad</p>
-          <p style={{ lineHeight: "1.5", margin: "6px 3px" }}>Pensamiento <br />
-          crítico</p>
-          <p style={{ margin: "6px 3px" }}>Creatividad</p>
-        </div>
+    {/* IMAGEN */}
+    <div
+      style={{
+        position: "relative",
+        height: "100%",
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "center",
+      }}
+    >
+      <img
+        src="/perfil.png"
+        alt="Cristian Mercado"
+        style={{
+          width: "100%",
+          maxWidth: "600px",
+          height: "auto",
+          filter: "grayscale(100%)",
+          objectFit: "contain",
+          position: "absolute",
+          bottom: "0",
+          left: "55%",
+          transform: "translateX(-50%)",
+        }}
+      />
+
+      {/* Rectángulo blanco con íconos */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "35px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          background: "#fff",
+          borderRadius: "40px",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+          padding: "10px 30px",
+          display: "flex",
+          gap: "25px",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 10,
+        }}
+      >
+        {["/python.png", "/excel.png", "/word.png", "/grafico.png"].map(
+          (icon, i) => (
+            <img
+              key={i}
+              src={icon}
+              alt=""
+              style={{
+                width: "35px",
+                height: "35px",
+                objectFit: "contain",
+              }}
+            />
+          )
+        )}
       </div>
     </div>
 
-    {/* Columna Derecha */}
-    <div style={{ position: "relative", zIndex: 4 }}>
-      {/* Rectángulo negro con nombre - MUY DELGADO y COMIENZA ANTES */}
+    {/* TEXTO */}
+    <div style={{ color: "#000", textAlign: "center" }}>
       <div
         style={{
           background: "#05020e",
           color: "#fff",
-          borderRadius: "30px 0 0 30px",
-          padding: "5px 140px",
+          borderRadius: "30px 30px 30px 30px",
+          padding: "5px 110px 5px 100px",
           display: "inline-block",
           marginBottom: "40px",
-          float: "right",
-          marginRight: "-70px",
-          marginLeft: "-90px",
+          maxWidth: "100%",
         }}
       >
         <h2
           style={{
-            fontSize: "48px",
+            fontSize: "42px",
             fontWeight: "700",
             margin: "0",
             whiteSpace: "nowrap",
@@ -116,127 +224,123 @@ export default function Portfolio() {
         </h2>
       </div>
 
-      <div style={{ clear: "both" }}>
-        <p
+      <p
+        style={{
+          fontSize: "18px",
+          lineHeight: "1.6",
+          marginTop: "30px",
+          textAlign: "left",
+          marginRight: "10px",
+          marginBottom: "30px",
+          wordWrap: "break-word",
+          overflowWrap: "break-word"
+
+
+        }}
+      >
+        Soy una persona comprometida, creativa y con muchas ganas de aprender.
+        Me gusta mucho el diseño y las matemáticas. Me destaco por trabajar bien
+        en equipo, analizar problemas y buscar siempre soluciones creativas.
+        Actualmente me encuentro en formación, con el objetivo de desarrollar
+        mis habilidades y crecer profesionalmente.
+      </p>
+
+      <h3
+        style={{
+          fontSize: "26px",
+          fontWeight: "700",
+          marginBottom: "40px",
+          textAlign: "left"
+        }}
+      >
+        Educación
+      </h3>
+
+      <div style={{ display: "flex", alignItems: "left", gap: "1" }}>
+        <div
           style={{
-            fontSize: "20px",
-            lineHeight: "1.4",
-            color: "#000",
-            marginBottom: "30px",
-            marginTop: "0",
+            background: "#000",
+            color: "#fff",
+            padding: "10px 6px",
+            writingMode: "vertical-rl",
+            textOrientation: "mixed",
+            fontSize: "11px",
+            fontWeight: "500",
+            letterSpacing: "1px",
+            minWidth: "30px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          Soy una persona comprometida, creativa y con muchas ganas de aprender. Me gusta mucho el diseño y las matemáticas. Me destaco por trabajar bien en equipo, analizar problemas y buscar siempre soluciones creativas. Actualmente me encuentro en formación, con el objetivo de desarrollar sus habilidades y crecer profesionalmente.
-        </p>
-
-        <h3
-          style={{
-            fontSize: "28px",
-            fontWeight: "700",
-            color: "#000",
-            marginBottom: "20px",
-          }}
-        >
-          Educación
-        </h3>
-
-        <div style={{ display: "flex", alignItems: "flex-start", gap: "0" }}>
-          <div
+          2024-2025
+        </div>
+        <div style={{ paddingLeft: "15px", paddingTop: "10px" }}>
+          <h4
             style={{
-              background: "#000",
-              color: "#fff",
-              padding: "10px 6px",
-              writingMode: "vertical-rl",
-              textOrientation: "mixed",
-              fontSize: "11px",
-              fontWeight: "500",
-              letterSpacing: "1px",
-              minWidth: "30px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              fontSize: "16px",
+              fontWeight: "700",
+              marginBottom: "8px",
+              textAlign: "left",
+
             }}
           >
-            2024-2025
-          </div>
-          <div style={{ paddingLeft: "20px", paddingTop: "10px" }}>
-            <h4
-              style={{
-                fontSize: "16px",
-                fontWeight: "700",
-                color: "#000",
-                marginBottom: "17px",
-                marginTop: "0",
-              }}
-            >
-              BACHILLERATO GENERAL
-            </h4>
-            <p
-              style={{
-                fontSize: "13px",
-                fontStyle: "italic",
-                color: "#000",
-                lineHeight: "0",
-                margin: "0",
-              }}
-            >
-              COMPLEJO EDUCATIVO SOLDADO OSCAR ANTONIOO ORTIZ REYES
-            </p>
-          </div>
+            BACHILLERATO GENERAL
+          </h4>
+          <p
+            style={{
+              fontSize: "13px",
+              fontStyle: "italic",
+              margin: "0",
+            }}
+          >
+            COMPLEJO EDUCATIVO SOLDADO OSCAR ANTONIO ORTIZ REYES
+          </p>
         </div>
       </div>
     </div>
   </div>
 
-  {/* Imagen de perfil - COMPLETA sin cortar */}
-  <img
-    src="/perfil.png"
-    alt="Cristian Mercado"
-    style={{
-      position: "absolute",
-      bottom: "0",
-      left: "10%",
-      width: "auto",
-      height: "100%",
-      display: "block",
-      filter: "grayscale(100%)",
-      zIndex: 1,
-      objectFit: "contain",
-      objectPosition: "center bottom",
-    }}
-  />
+  {/* RESPONSIVE */}
+  <style>
+    {`
+      @media (max-width: 900px) {
+        div[style*="grid-template-columns"] {
+          grid-template-columns: 1fr !important;
+          gap: 40px !important;
+          text-align: center !important;
+        }
 
-  {/* Rectángulo blanco con íconos - ABAJO A LA IZQUIERDA */}
-  <div
-    style={{
-      position: "absolute",
-      bottom: "50px",
-      left: "0",
-      background: "#fff",
-      borderRadius: "0 50px 50px 0",
-      boxShadow: "0 10px 40px rgba(0,0,0,0.15)",
-      padding: "10px 40px",
-      display: "flex",
-      gap: "28px",
-      alignItems: "center",
-      zIndex: 10,
-    }}
-  >
-    {["/python.png", "/excel.png", "/word.png", "/grafico.png"].map(
-      (icon, i) => (
-        <img
-          key={i}
-          src={icon}
-          alt=""
-          style={{
-            width: "40px",
-            height: "40px",
-            objectFit: "contain",
-          }}
-        />
-      )
-    )}
-  </div>
+        img[alt="Cristian Mercado"] {
+          position: relative !important;
+          width: 80% !important;
+          height: auto !important;
+          transform: translateX(0) !important;
+          left: 0 !important;
+          margin: 0 auto !important;
+        }
+
+        div[style*="border-radius: 40px"] {
+          position: relative !important;
+          bottom: 0 !important;
+          margin: 20px auto 0 auto !important;
+          left: 0 !important;
+          transform: none !important;
+        }
+
+        div[style*="Cristian Mercado"] {
+          margin: 0 auto !important;
+          display: block !important;
+        }
+
+        h2, p, h3, h4, p {
+          text-align: center !important;
+        }
+
+        
+      }
+    `}
+  </style>
 </section>
 
 
