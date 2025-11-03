@@ -37,6 +37,7 @@ export default function Portfolio() {
 
 {/* SECCIÓN 2: SOBRE MÍ */}
 <section
+  id="sobre-mi"
   style={{
     position: "relative",
     width: "100%",
@@ -235,8 +236,6 @@ export default function Portfolio() {
           marginBottom: "30px",
           wordWrap: "break-word",
           overflowWrap: "break-word"
-
-
         }}
       >
         Soy una persona comprometida, creativa y con muchas ganas de aprender.
@@ -283,7 +282,6 @@ export default function Portfolio() {
               fontWeight: "700",
               marginBottom: "8px",
               textAlign: "left",
-
             }}
           >
             BACHILLERATO GENERAL
@@ -307,30 +305,30 @@ export default function Portfolio() {
     {`
       @media (max-width: 900px) {
         /* Grid principal a una columna */
-        section > div:last-of-type {
+        #sobre-mi > div:last-of-type {
           grid-template-columns: 1fr !important;
           gap: 30px !important;
           padding: 20px !important;
         }
 
         /* Contenedor de habilidades - scroll horizontal */
-        section > div:first-of-type > div {
+        #sobre-mi > div:first-of-type > div {
           padding: 15px 20px !important;
         }
 
         /* Título Habilidades más pequeño */
-        section h2:first-of-type {
+        #sobre-mi h2:first-of-type {
           font-size: 22px !important;
         }
 
         /* Tags de habilidades más pequeñas */
-        section > div:first-of-type div[style*="border-radius: 25px"] {
+        #sobre-mi > div:first-of-type div[style*="border-radius: 25px"] {
           font-size: 13px !important;
           padding: 8px 16px !important;
         }
 
         /* Contenedor de imagen */
-        section > div:last-of-type > div:first-child {
+        #sobre-mi > div:last-of-type > div:first-child {
           order: 1;
           height: auto !important;
           padding: 0 20px;
@@ -341,7 +339,7 @@ export default function Portfolio() {
         }
 
         /* Imagen principal */
-        img[alt="Cristian Mercado"] {
+        #sobre-mi img[alt="Cristian Mercado"] {
           position: relative !important;
           width: 100% !important;
           max-width: 350px !important;
@@ -353,7 +351,7 @@ export default function Portfolio() {
         }
 
         /* Caja de íconos */
-        section > div:last-of-type > div:first-child > div {
+        #sobre-mi > div:last-of-type > div:first-child > div {
           position: relative !important;
           bottom: auto !important;
           left: auto !important;
@@ -369,31 +367,31 @@ export default function Portfolio() {
         }
 
         /* Íconos más pequeños */
-        section > div:last-of-type > div:first-child > div img {
+        #sobre-mi > div:last-of-type > div:first-child > div img {
           width: 26px !important;
           height: 26px !important;
           flex-shrink: 0 !important;
         }
 
         /* Contenedor de texto */
-        section > div:last-of-type > div:last-child {
+        #sobre-mi > div:last-of-type > div:last-child {
           order: 2;
           padding: 0 20px;
         }
 
         /* Caja con nombre */
-        section > div:last-of-type > div:last-child > div:first-child {
+        #sobre-mi > div:last-of-type > div:last-child > div:first-child {
           padding: 5px 40px !important;
           margin-bottom: 25px !important;
         }
 
         /* Nombre más pequeño */
-        section > div:last-of-type > div:last-child h2 {
+        #sobre-mi > div:last-of-type > div:last-child h2 {
           font-size: 28px !important;
         }
 
         /* Párrafo de descripción */
-        section > div:last-of-type > div:last-child > p {
+        #sobre-mi > div:last-of-type > div:last-child > p {
           text-align: center !important;
           margin-left: 0 !important;
           margin-right: 0 !important;
@@ -401,20 +399,20 @@ export default function Portfolio() {
         }
 
         /* Título Educación */
-        section > div:last-of-type > div:last-child > h3 {
+        #sobre-mi > div:last-of-type > div:last-child > h3 {
           text-align: center !important;
           font-size: 22px !important;
           margin-bottom: 20px !important;
         }
 
         /* Contenedor de educación */
-        section > div:last-of-type > div:last-child > div:last-child {
+        #sobre-mi > div:last-of-type > div:last-child > div:last-child {
           flex-direction: column !important;
           align-items: center !important;
         }
 
         /* Barra de fecha */
-        section > div:last-of-type > div:last-child > div:last-child > div:first-child {
+        #sobre-mi > div:last-of-type > div:last-child > div:last-child > div:first-child {
           writing-mode: horizontal-tb !important;
           text-orientation: mixed !important;
           padding: 6px 20px !important;
@@ -423,20 +421,20 @@ export default function Portfolio() {
         }
 
         /* Contenido de educación */
-        section > div:last-of-type > div:last-child > div:last-child > div:last-child {
+        #sobre-mi > div:last-of-type > div:last-child > div:last-child > div:last-child {
           padding-left: 0 !important;
           padding-top: 15px !important;
           text-align: center !important;
         }
 
         /* Título de bachillerato */
-        section > div:last-of-type > div:last-child > div:last-child h4 {
+        #sobre-mi > div:last-of-type > div:last-child > div:last-child h4 {
           text-align: center !important;
           font-size: 15px !important;
         }
 
         /* Nombre del colegio */
-        section > div:last-of-type > div:last-child > div:last-child p {
+        #sobre-mi > div:last-of-type > div:last-child > div:last-child p {
           text-align: center !important;
           font-size: 12px !important;
         }
@@ -503,7 +501,7 @@ export default function Portfolio() {
   }} className="grid-2-cols">
     
     {/* Columna de la imagen con fondo - IZQUIERDA */}
-    <div style={{ position: 'relative', height: '100%' }}>  {/* <-- QUITÉ className="order-2-mobile" */}
+    <div style={{ position: 'relative', height: '100%' }}>
       {/* Imagen de fondo oscura - más a la izquierda */}
       <div style={{
         position: 'absolute',
@@ -582,7 +580,7 @@ export default function Portfolio() {
     fontWeight: 'bold',
     marginBottom: '40px',
     color: '#000',
-    textAlign: 'center'  // <-- Solo esto para centrar "Dexpert"
+    textAlign: 'center'
   }}>
     Dexpert
   </h2>
@@ -590,7 +588,7 @@ export default function Portfolio() {
   fontSize: 'clamp(16px, 2.5vw, 20px)',
   lineHeight: '1.5',
   color: '#000',
-  paddingLeft: '60px'  // <-- Agrega esto (ajusta el valor que necesites)
+  paddingLeft: '60px'
 }}>
   Dexpert es una plataforma que conecta a jóvenes sin experiencia con pequeñas 
   empresas para trabajar en proyectos reales. Busca darles su primera experiencia 
