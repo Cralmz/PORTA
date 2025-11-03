@@ -159,7 +159,7 @@ export default function Portfolio() {
           objectFit: "contain",
           position: "absolute",
           bottom: "0",
-          left: "55%",
+          left: "50%",
           transform: "translateX(-50%)",
         }}
       />
@@ -174,7 +174,7 @@ export default function Portfolio() {
           background: "#fff",
           borderRadius: "40px",
           boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-          padding: "10px 30px",
+          padding: "15px 35px",
           display: "flex",
           gap: "25px",
           alignItems: "center",
@@ -192,6 +192,7 @@ export default function Portfolio() {
                 width: "35px",
                 height: "35px",
                 objectFit: "contain",
+                flexShrink: 0,
               }}
             />
           )
@@ -305,39 +306,140 @@ export default function Portfolio() {
   <style>
     {`
       @media (max-width: 900px) {
-        div[style*="grid-template-columns"] {
+        /* Grid principal a una columna */
+        section > div:last-of-type {
           grid-template-columns: 1fr !important;
-          gap: 40px !important;
-          text-align: center !important;
+          gap: 30px !important;
+          padding: 20px !important;
         }
 
+        /* Contenedor de habilidades - scroll horizontal */
+        section > div:first-of-type > div {
+          padding: 15px 20px !important;
+        }
+
+        /* Título Habilidades más pequeño */
+        section h2:first-of-type {
+          font-size: 22px !important;
+        }
+
+        /* Tags de habilidades más pequeñas */
+        section > div:first-of-type div[style*="border-radius: 25px"] {
+          font-size: 13px !important;
+          padding: 8px 16px !important;
+        }
+
+        /* Contenedor de imagen */
+        section > div:last-of-type > div:first-child {
+          order: 1;
+          height: auto !important;
+          padding: 0 20px;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: center !important;
+          align-items: center !important;
+        }
+
+        /* Imagen principal */
         img[alt="Cristian Mercado"] {
           position: relative !important;
-          width: 80% !important;
-          height: auto !important;
-          transform: translateX(0) !important;
-          left: 0 !important;
-          margin: 0 auto !important;
-        }
-
-        div[style*="border-radius: 40px"] {
-          position: relative !important;
-          bottom: 0 !important;
-          margin: 20px auto 0 auto !important;
+          width: 100% !important;
+          max-width: 350px !important;
           left: 0 !important;
           transform: none !important;
-        }
-
-        div[style*="Cristian Mercado"] {
+          bottom: 0 !important;
           margin: 0 auto !important;
           display: block !important;
         }
 
-        h2, p, h3, h4, p {
+        /* Caja de íconos */
+        section > div:last-of-type > div:first-child > div {
+          position: relative !important;
+          bottom: auto !important;
+          left: auto !important;
+          transform: none !important;
+          margin: -40px auto 0 auto !important;
+          padding: 10px 20px !important;
+          gap: 12px !important;
+          width: auto !important;
+          max-width: 85% !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+        }
+
+        /* Íconos más pequeños */
+        section > div:last-of-type > div:first-child > div img {
+          width: 26px !important;
+          height: 26px !important;
+          flex-shrink: 0 !important;
+        }
+
+        /* Contenedor de texto */
+        section > div:last-of-type > div:last-child {
+          order: 2;
+          padding: 0 20px;
+        }
+
+        /* Caja con nombre */
+        section > div:last-of-type > div:last-child > div:first-child {
+          padding: 5px 40px !important;
+          margin-bottom: 25px !important;
+        }
+
+        /* Nombre más pequeño */
+        section > div:last-of-type > div:last-child h2 {
+          font-size: 28px !important;
+        }
+
+        /* Párrafo de descripción */
+        section > div:last-of-type > div:last-child > p {
+          text-align: center !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          font-size: 16px !important;
+        }
+
+        /* Título Educación */
+        section > div:last-of-type > div:last-child > h3 {
+          text-align: center !important;
+          font-size: 22px !important;
+          margin-bottom: 20px !important;
+        }
+
+        /* Contenedor de educación */
+        section > div:last-of-type > div:last-child > div:last-child {
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+
+        /* Barra de fecha */
+        section > div:last-of-type > div:last-child > div:last-child > div:first-child {
+          writing-mode: horizontal-tb !important;
+          text-orientation: mixed !important;
+          padding: 6px 20px !important;
+          min-width: auto !important;
+          width: fit-content !important;
+        }
+
+        /* Contenido de educación */
+        section > div:last-of-type > div:last-child > div:last-child > div:last-child {
+          padding-left: 0 !important;
+          padding-top: 15px !important;
           text-align: center !important;
         }
 
-        
+        /* Título de bachillerato */
+        section > div:last-of-type > div:last-child > div:last-child h4 {
+          text-align: center !important;
+          font-size: 15px !important;
+        }
+
+        /* Nombre del colegio */
+        section > div:last-of-type > div:last-child > div:last-child p {
+          text-align: center !important;
+          font-size: 12px !important;
+        }
       }
     `}
   </style>
