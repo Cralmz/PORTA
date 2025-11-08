@@ -481,15 +481,112 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* SECCIÓN 4: DEXPERT */}
-<section style={{
+      {/* SECCIÓN 3: DEXPERT */}
+<section id="dexpert-section" style={{
   minHeight: '100vh',
   background: '#fff',
   padding: '60px 20px',
   position: 'relative',
   overflow: 'hidden'
 }}>
-  <div style={{
+  <style>{`
+    /* SOLO LAPTOP - Mayor a 768px */
+    @media (min-width: 769px) {
+      #dexpert-section {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 30px 20px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+      }
+      
+      .grid-dexpert {
+        max-height: 85vh !important;
+        width: 100% !important;
+        overflow: hidden !important;
+      }
+      
+      .dexpert-image-container {
+        height: 75vh !important;
+        max-height: 75vh !important;
+        overflow: visible !important;
+      }
+      
+      .dexpert-background {
+        max-height: 75vh !important;
+      }
+      
+      .dexpert-main-image {
+        top: 15% !important;
+        left: 30% !important;
+        width: 70% !important;
+        max-width: 500px !important;
+      }
+      
+      .dexpert-title {
+        font-size: clamp(40px, 5vw, 70px) !important;
+        margin-bottom: clamp(20px, 2.5vh, 35px) !important;
+      }
+      
+      .dexpert-description p {
+        font-size: clamp(14px, 1.3vw, 20px) !important;
+        line-height: 1.65 !important;
+        padding-left: 40px !important;
+      }
+    }
+    
+    /* MÓVIL - Menor o igual a 768px */
+    @media (max-width: 768px) {
+      .grid-dexpert {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+      .dexpert-title {
+        text-align: center !important;
+      }
+      .dexpert-description {
+        order: 2;
+        text-align: center;
+        padding: 0 20px;
+      }
+      .dexpert-description p {
+        padding-left: 0 !important;
+      }
+      .dexpert-image-container {
+        order: 1;
+        height: 500px !important;
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .dexpert-background {
+        position: relative !important;
+        bottom: auto !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 auto;
+      }
+      .dexpert-main-image {
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 90% !important;
+        max-width: 500px !important;
+      }
+      .dexpert-footer-text {
+        bottom: 20px !important;
+        left: 20px !important;
+      }
+    }
+  `}</style>
+
+  <div className="grid-dexpert" style={{
     maxWidth: '1200px',
     margin: '0 auto',
     display: 'grid',
@@ -498,12 +595,12 @@ export default function Portfolio() {
     alignItems: 'center',
     position: 'relative',
     zIndex: 0
-  }} className="grid-2-cols">
+  }}>
     
     {/* Columna de la imagen con fondo - IZQUIERDA */}
-    <div style={{ position: 'relative', height: '100%' }}>
-      {/* Imagen de fondo oscura - más a la izquierda */}
-      <div style={{
+    <div className="dexpert-image-container" style={{ position: 'relative', height: '100%' }}>
+      {/* Imagen de fondo oscura */}
+      <div className="dexpert-background" style={{
         position: 'absolute',
         bottom: '-55%',
         top: '-20%',
@@ -525,7 +622,7 @@ export default function Portfolio() {
         />
         
         {/* Textos dentro de la imagen de fondo */}
-        <div style={{
+        <div className="dexpert-footer-text" style={{
           position: 'absolute',
           bottom: '30px',
           left: '20px',
@@ -554,7 +651,7 @@ export default function Portfolio() {
       </div>
 
       {/* Imagen principal de Dexpert */}
-      <div style={{ 
+      <div className="dexpert-main-image" style={{ 
         position: 'absolute',
         top: '100px',
         left: '30%',
@@ -574,96 +671,261 @@ export default function Portfolio() {
     </div>
 
     {/* Descripción - DERECHA */}
-<div style={{}}>
-  <h2 style={{
-    fontSize: 'clamp(50px, 8vw, 70px)',
-    fontWeight: 'bold',
-    marginBottom: '40px',
-    color: '#000',
-    textAlign: 'center'
-  }}>
-    Dexpert
-  </h2>
-  <p style={{
-  fontSize: 'clamp(16px, 2.5vw, 20px)',
-  lineHeight: '1.5',
-  color: '#000',
-  paddingLeft: '60px'
-}}>
-  Dexpert es una plataforma que conecta a jóvenes sin experiencia con pequeñas 
-  empresas para trabajar en proyectos reales. Busca darles su primera experiencia 
-  laboral, permitiéndoles aprender, aplicar sus conocimientos y obtener un certificado. 
-  Es inclusiva, abierta a personas con discapacidad, y también ayuda a emprendedores 
-  a hacer crecer sus negocios con apoyo joven.
-</p>
-</div>
+    <div className="dexpert-description">
+      <h2 className="dexpert-title" style={{
+        fontSize: 'clamp(50px, 8vw, 70px)',
+        fontWeight: 'bold',
+        marginBottom: '40px',
+        color: '#000',
+        textAlign: 'center'
+      }}>
+        Dexpert
+      </h2>
+      <p style={{
+        fontSize: 'clamp(16px, 2.5vw, 20px)',
+        lineHeight: '1.5',
+        color: '#000',
+        paddingLeft: '60px'
+      }}>
+        Dexpert es una plataforma que conecta a jóvenes sin experiencia con pequeñas 
+        empresas para trabajar en proyectos reales. Busca darles su primera experiencia 
+        laboral, permitiéndoles aprender, aplicar sus conocimientos y obtener un certificado. 
+        Es inclusiva, abierta a personas con discapacidad, y también ayuda a emprendedores 
+        a hacer crecer sus negocios con apoyo joven.
+      </p>
+    </div>
   </div>
 </section>
 
-      {/* SECCIÓN 5: CHAMBI */}
-      <section style={{
-        minHeight: '100vh',
-        background: 'black',
-        padding: '60px 20px'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gap: '60px',
-          alignItems: 'center'
-        }} className="grid-2-cols">
-          {/* Descripción */}
-          <div style={{}} className="order-2-mobile">
-            <h2 style={{
-              fontSize: 'clamp(50px, 8vw, 70px)',
-              fontWeight: 'bold',
-              marginBottom: '40px',
-              color: '#000'
-            }}>
-              CHAMBI
-            </h2>
-            <p style={{
-              fontSize: 'clamp(16px, 2.5vw, 20px)',
-              lineHeight: '1.8',
-              color: '#000'
-            }}>
-              CHAMBI es una plataforma que conecta a personas con calificadas para reparaciones 
-              del hogar de forma rápida y segura. Usa localización para encontrar las personas 
-              más cercanas y confiables. También ayuda a que los trabajadores tengan más 
-              reconocimiento en sus comunidades.
-            </p>
-          </div>
+{/* SECCIÓN 4: CHAMBI */}
+<section id="chambi-section" style={{
+  minHeight: '100vh',
+  background: '#fff',
+  padding: '60px 20px',
+  position: 'relative',
+  overflow: 'hidden'
+}}>
+  <style>{`
+    /* SOLO LAPTOP - Mayor a 768px */
+    @media (min-width: 769px) {
+      #chambi-section {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 30px 20px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+      }
+      
+      .grid-chambi {
+        max-height: 85vh !important;
+        width: 100% !important;
+        overflow: hidden !important;
+      }
+      
+      .chambi-image-container {
+        height: 75vh !important;
+        max-height: 75vh !important;
+        overflow: hidden !important;
+      }
+      
+      .chambi-background {
+        max-height: 75vh !important;
+        overflow: hidden !important;
+      }
+      
+      .chambi-login-image {
+        top: 8% !important;
+        width: 52% !important;
+        max-width: 380px !important;
+      }
+      
+      .chambi-title {
+        font-size: clamp(40px, 5vw, 70px) !important;
+        margin-bottom: clamp(20px, 2.5vh, 35px) !important;
+      }
+      
+      .chambi-description p {
+        font-size: clamp(14px, 1.3vw, 20px) !important;
+        line-height: 1.65 !important;
+      }
+      
+      .chambi-footer-text {
+        bottom: 20px !important;
+      }
+      
+      .chambi-footer-text p:first-child {
+        font-size: clamp(11px, 1vw, 14px) !important;
+      }
+      
+      .chambi-footer-text p:last-child {
+        font-size: clamp(10px, 0.9vw, 13px) !important;
+      }
+    }
+    
+    /* MÓVIL - Menor o igual a 768px */
+    @media (max-width: 768px) {
+      .grid-chambi {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+      .chambi-title {
+        text-align: center !important;
+        padding-right: 0 !important;
+        order: 2;
+      }
+      .chambi-description {
+        order: 2;
+        text-align: center;
+        padding: 0 20px;
+      }
+      .chambi-image-container {
+        order: 1;
+        height: 500px !important;
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .chambi-background {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 auto;
+      }
+      .chambi-login-image {
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 90% !important;
+        max-width: 500px !important;
+      }
+      .chambi-footer-text {
+        bottom: 20px !important;
+        right: 20px !important;
+      }
+    }
+  `}</style>
 
-          {/* Imagen del proyecto */}
-          <div style={{ position: 'relative' }} className="order-1-mobile">
-            <img 
-              src="/chambi.jpg" 
-              alt="Chambi Project" 
-              style={{
-                width: '100%',
-                borderRadius: '20px',
-                boxShadow: '0 25px 50px rgba(0,0,0,0.5)'
-              }}
-            />
-            <div style={{
-              position: 'absolute',
-              bottom: '30px',
-              right: '30px',
-              color: 'white',
-              textAlign: 'right'
-            }}>
-              <p style={{ fontSize: 'clamp(14px, 2.5vw, 20px)', fontWeight: 'bold', margin: 0 }}>
-                PROGRAMA EMPRESARIAL ¡SUPÉRATE!
-              </p>
-              <p style={{ fontSize: 'clamp(12px, 2vw, 18px)', fontStyle: 'italic', margin: 0 }}>
-                Expo de logros 2024
-              </p>
-            </div>
-          </div>
+  <div className="grid-chambi" style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '60px',
+    alignItems: 'center',
+    position: 'relative',
+    zIndex: 0
+  }}>
+    
+    {/* Descripción - IZQUIERDA */}
+    <div className="chambi-description">
+      <h2 className="chambi-title" style={{
+        fontSize: 'clamp(50px, 8vw, 70px)',
+        fontWeight: 'bold',
+        marginBottom: '40px',
+        color: '#000',
+        textAlign: 'left'
+      }}>
+        CHAMBI
+      </h2>
+      <p style={{
+        fontSize: 'clamp(16px, 2vw, 20px)',
+        lineHeight: '1.8',
+        color: '#000'
+      }}>
+        CHAMBI es una plataforma que conecta a personas con
+        calificadas para reparaciones del hogar de forma rápida y segura.
+        Usa localización para encontrar las personas más cercanas y confiables.
+        También ayuda a que los trabajadores tengan más reconocimiento en sus comunidades.
+      </p>
+    </div>
+
+    {/* Columna de la imagen con fondo - DERECHA */}
+    <div className="chambi-image-container" style={{ 
+      position: 'relative', 
+      height: '100%',
+      minHeight: 'auto'
+    }}>
+      {/* Imagen de fondo oscura */}
+      <div className="chambi-background" style={{
+        position: 'absolute',
+        top: '0',
+        bottom: '0',
+        right: '-90px',
+        left: '50px',
+        height: '100%',
+        zIndex: 0,
+        overflow: 'hidden',
+        borderRadius: '20px'
+      }}>
+        <img 
+          src="/CHAMBI.jpg"
+          alt="Background" 
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
+        />
+        
+        {/* Textos dentro de la imagen de fondo */}
+        <div className="chambi-footer-text" style={{
+          position: 'absolute',
+          bottom: '30px',
+          right: '30px',
+          zIndex: 3
+        }}>
+          <p style={{ 
+            fontSize: '14px',
+            fontWeight: 'bold', 
+            margin: 0,
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.7)',
+            letterSpacing: '0.5px',
+            textAlign: 'right'
+          }}>
+            PROGRAMA EMPRESARIAL ¡SUPÉRATE!
+          </p>
+          <p style={{ 
+            fontSize: '13px',
+            fontStyle: 'italic', 
+            margin: '5px 0 0 0',
+            textAlign: 'right',
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
+          }}>
+            Expo de logros 2024
+          </p>
         </div>
-      </section>
+      </div>
+
+      {/* Imagen principal de Chambi*/}
+      <div className="chambi-login-image" style={{ 
+        position: 'absolute',
+        top: '80px',
+        left: '0',
+        width: '450px',
+        zIndex: 2 
+      }}>
+        <img 
+          src="/chambilogin.png" 
+          alt="Chambi Login" 
+          style={{
+            width: '100%',
+            borderRadius: '20px',
+            boxShadow: '0 25px 50px rgba(0,0,0,0.3)'
+          }}
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* SECCIÓN 6: CERTIFICADOS */}
       <section style={{
