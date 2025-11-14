@@ -1088,7 +1088,7 @@ export default function Portfolio() {
             transition: 'color 0.3s',
             fontSize: '24px'
           }}
-          onMouseEnter={(e) => e.currentTarget.style.color = '#1925c5ff'}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#a819c5ff'}
           onMouseLeave={(e) => e.currentTarget.style.color = '#b8b8d1'}
         >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
@@ -1116,7 +1116,7 @@ export default function Portfolio() {
 
         {/* LinkedIn */}
         <a 
-          href="www.linkedin.com/in/cristian-mercado-cralmz17" 
+          href="https://www.linkedin.com/in/cristian-mercado-cralmz17/" 
           target="_blank" 
           rel="noopener noreferrer"
           style={{
@@ -1124,7 +1124,7 @@ export default function Portfolio() {
             transition: 'color 0.3s',
             fontSize: '24px'
           }}
-          onMouseEnter={(e) => e.currentTarget.style.color = '#ff1493'}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#14e4ffff'}
           onMouseLeave={(e) => e.currentTarget.style.color = '#b8b8d1'}
         >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
